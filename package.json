@@ -24,23 +24,23 @@
     "test:preload": "vitest run -r packages/preload --passWithNoTests",
     "test:renderer": "vitest run -r packages/renderer --passWithNoTests",
     "watch": "node scripts/watch.js",
-    "lint": "eslint . --ext js,ts,vue",
+    "lint": "eslint . --ext js,ts",
     "typecheck:main": "tsc --noEmit -p packages/main/tsconfig.json",
     "typecheck:preload": "tsc --noEmit -p packages/preload/tsconfig.json",
-    "typecheck:renderer": "vue-tsc --noEmit -p packages/renderer/tsconfig.json",
     "typecheck": "npm run typecheck:main && npm run typecheck:preload && npm run typecheck:renderer",
     "postinstall": "cross-env ELECTRON_RUN_AS_NODE=1 npx --no-install electron ./scripts/update-electron-vendors.js "
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "5.30.4",
-    "@vitejs/plugin-vue": "3.0.0-beta.0",
-    "@vue/test-utils": "2.0.1",
+    "@types/react": "^18.0.14",
+    "@types/react-dom": "^18.0.6",
+    "@typescript-eslint/eslint-plugin": "^5.30.5",
+    "@typescript-eslint/parser": "^5.30.5",
     "cross-env": "7.0.3",
     "electron": "19.0.7",
     "electron-builder": "23.1.0",
     "electron-devtools-installer": "3.2.0",
-    "eslint": "8.19.0",
-    "eslint-plugin-vue": "9.1.1",
+    "eslint": "^8.19.0",
+    "eslint-config-prettier": "^8.5.0",
     "happy-dom": "6.0.0",
     "nano-staged": "0.8.0",
     "playwright": "1.23.1",
@@ -48,11 +48,11 @@
     "typescript": "4.7.4",
     "unplugin-auto-expose": "0.0.1",
     "vite": "3.0.0-beta.5",
-    "vitest": "0.17.0",
-    "vue-tsc": "0.38.2"
+    "vitest": "0.17.0"
   },
   "dependencies": {
     "electron-updater": "5.0.5",
-    "vue": "3.2.37"
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   }
 }

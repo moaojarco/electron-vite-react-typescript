@@ -6,31 +6,24 @@
     "moduleResolution": "Node",
     "skipLibCheck": true,
     "strict": true,
+    "allowSyntheticDefaultImports": true,
     "isolatedModules": true,
-    "jsx": "preserve",
+    "jsx": "react",
 
-    "types" : ["node"],
+    "types": ["node"],
     "baseUrl": ".",
     "paths": {
-      "#preload": [
-        "../preload/src/index"
-      ],
-      "/@/*": [
-        "./src/*"
-      ]
+      "#preload": ["../preload/src/index"],
+      "/@/*": ["./src/*"]
     },
     "lib": ["ESNext", "dom", "dom.iterable"]
   },
 
   "include": [
-    "src/**/*.vue",
     "src/**/*.ts",
     "src/**/*.tsx",
     "types/**/*.d.ts",
-    "../../types/**/*.d.ts",
+    "../../types/**/*.d.ts"
   ],
-  "exclude": [
-    "**/*.spec.ts",
-    "**/*.test.ts",
-  ]
+  "exclude": ["**/*.spec.ts", "**/*.test.ts"]
 }
